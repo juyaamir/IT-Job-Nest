@@ -16,7 +16,7 @@ const joOptions = jobCategories.map((job) => ({
 }))
 
 const [selectedCity, setSelectedCity] = useState(null);
-
+const [selectedJob, setSelectedJob] = useState(null);
 const handleChange = (option: any) => {
 setSelectedCity(option);
 };
@@ -40,12 +40,15 @@ return (
         </select> */}
         <Select 
         className="w-1/2"
+        placeholder = 'Select a job category...'
         options={joOptions}
-        onChange={handleChange} 
+        value={selectedJob}
+        onChange={(option: any) => setSelectedJob(option)} 
         isClearable={true} isSearchable={true} 
         styles={customStyles}
         />
         <Select className="w-1/2" 
+        placeholder="Select a city..."
         value={selectedCity} 
         closeMenuOnSelect={true} 
         options={options}
