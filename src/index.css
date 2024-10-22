@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .searchBar-width {
     max-width: 1200px;
+}
+
+.sofia {
+    font-family: "Sofia", sans-serif;
 }
