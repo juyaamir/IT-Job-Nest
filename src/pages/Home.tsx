@@ -2,7 +2,7 @@ import SearchServices from "../components/SearchServices"
 
 const Home = () => {
   return (
-    <div>
+    <div className="px-4">
         <SearchServices />
     </div>
   )
