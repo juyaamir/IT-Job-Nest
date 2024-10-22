@@ -1,0 +1,67 @@
+[
+
+    {
+      "name": "Lufthansa Systems",
+      "url": "https://www.lhsystems.com",
+      "logo": "https://www.lhsystems.com/images/lsy_logo.svg",
+      "employees": "2000+",
+      "salary": "€50,000 - €80,000/year"
+    },
+    {
+      "name": "Instinctools",
+      "url": "https://www.instinctools.com",
+      "logo": "https://cdn-hokdj.nitrocdn.com/xTVZIceRirelUWcvTeSrIReGRrnfbTIP/assets/images/optimized/rev-d7a6143/www.instinctools.com/wp-content/themes/instinctoolscom/image/logo.svg",
+      "employees": "400+",
+      "salary": "€40,000 - €65,000/year"
+    },
+    {
+      "name": "TeamViewer",
+      "url": "https://www.teamviewer.com",
+      "logo": "https://s7g10.scene7.com/is/content/teamviewergmbh/logo-teamviewer-2?dpr=off",
+      "employees": "1500+",
+      "salary": "€45,000 - €75,000/year"
+    },
+
+    {
+      "name": "Nero AG",
+      "url": "https://www.nero.com",
+      "logo": "https://www.nero.com/nero-com-wAssets/img/Release-2021/Index/Nero_Brand.svg",
+      "employees": "300+",
+      "salary": "€40,000 - €70,000/year"
+    },
+    {
+      "name": "NXI",
+      "url": "https://www.nxi.de",
+      "logo": "https://www.moneyhouse.ch/assets/icons/moneyhouse_logo_white.svg",
+      "employees": "400+",
+      "salary": "€35,000 - €60,000/year"
+    },
+    {
+      "name": "Singula Team",
+      "url": "https://www.singularteam.de",
+      "logo": "https://singula.team/themes/custom/singula/logo.svg",
+      "employees": "500+",
+      "salary": "€30,000 - €50,000/year"
+    },
+    {
+      "name": "SaM Solutions",
+      "url": "https://www.sam-solutions.com",
+      "logo": "https://sam-solutions.de/bitrix/templates/sam/sam.header/assets/images/logo_30.svg",
+      "employees": "300+",
+      "salary": "€40,000 - €70,000/year"
+    },
+    {
+      "name": "eSparkBiz",
+      "url": "https://www.esparkbiz.com",
+      "logo": "https://www.esparkinfo.com/wp-content/uploads/2024/03/eSpark-logo-white.svg",
+      "employees": "200+",
+      "salary": "€30,000 - €55,000/year"
+    },
+    {
+      "name": "Bechtle",
+      "url": "https://www.bechtle.com",
+      "logo": "https://www.bechtle.com/assets/bens/img/brands/logo-bechtle-small.svg",
+      "employees": "5000+",
+      "salary": "€50,000 - €65,000/year"
+    }
+  ]
