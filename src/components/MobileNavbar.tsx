@@ -5,17 +5,18 @@ import { MdOutlineHomeWork } from "react-icons/md";
 import { MdFavoriteBorder } from "react-icons/md";
 import { FaRegUserCircle } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
+import { RxHamburgerMenu } from "react-icons/rx";
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState<Boolean>(false);
   const handleClick = () => {
     setIsOpen(false)
   }
   return (
-    <div className='flex justify-between p-2 '>
+    <div className='flex justify-between p-4 '>
       <Link to='/'>
         <Logo />
       </Link>
-      <button className='text-3xl ' onClick={()=> setIsOpen(true)}>🍔</button>
+      <button className='text-3xl ' onClick={()=> setIsOpen(true)}><RxHamburgerMenu /></button>
       {
         isOpen && (
       <div className='fixed inset-0 bg-black z-10 bg-opacity-50 '>
