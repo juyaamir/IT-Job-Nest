@@ -6,7 +6,7 @@
 .searchBar-width {
     max-width: 1000px;
 }
-.companies-width {
+.companies-width, .jobs-width {
     max-width: 1400px;
     margin: 0 auto;
 }

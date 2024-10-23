@@ -11,10 +11,10 @@ const DesktopNav = () => {
         <Link to='/'><Logo />
         </Link>
         <div className="flex flex-wrap justify-between gap-6">
-            <Link to='/companies' className="flex items-center gap-2 lg:text-2xl"><FaSearch />Search Job</Link>
-            <Link to='/companies' className="flex items-center gap-2 lg:text-2xl"><MdOutlineHomeWork />Companies</Link>
-            <Link to='/favorites' className="flex items-center gap-2 lg:text-2xl"><MdFavoriteBorder />Favorites</Link>
-            <Link to='/login' className="flex items-center gap-2 lg:text-2xl"><FaRegUserCircle/>Login</Link>
+            <Link to='/companies' className="flex items-center gap-2 lg:text-xl"><FaSearch />Search Job</Link>
+            <Link to='/companies' className="flex items-center gap-2 lg:text-xl"><MdOutlineHomeWork />Companies</Link>
+            <Link to='/favorites' className="flex items-center gap-2 lg:text-xl"><MdFavoriteBorder />Favorites</Link>
+            <Link to='/login' className="flex items-center gap-2 lg:text-xl"><FaRegUserCircle/>Login</Link>
           {/*   <Link to='/theme'>Theme</Link> */}
         </div>
     </div>
