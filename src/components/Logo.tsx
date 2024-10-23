@@ -2,9 +2,9 @@
 const Logo: React.FC = () => {
   return (
     <div className="flex items-center justify-center space-x-2">
-    <span className="text-4xl font-bold text-green-600 font-sofia ">IT-</span>
-    <span className="text-4xl font-bold text-orange-600 font-sofia ">Jobs</span>
-    <span className="text-4xl font-bold text-green-600 font-sofia ">-Nest</span>
+    <span className="text-2xl font-bold text-green-600 font-serif ">IT-</span>
+    <span className="text-2xl font-bold text-orange-600 font-sofia ">Job</span>
+    <span className="text-2xl font-bold text-green-600 font-serif ">-Nest</span>
   </div>
   )
 }

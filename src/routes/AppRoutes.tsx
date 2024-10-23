@@ -1,4 +1,4 @@
-import Companies from "../pages/Companies"
+import Companies from "../pages/companiesPage"
 import Home from "../pages/Home"
 import Login from "../pages/Login"
 import Favorites from "../pages/Favorites"

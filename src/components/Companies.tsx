@@ -4,7 +4,7 @@ import { FaPeopleGroup } from "react-icons/fa6";
 import { Link } from 'react-router-dom'
 const Companies = () => {
   return (
-    <div className='mt-10 border-t-2 border-t-green-500 pt-10'>
+    <div className='mt-10 border-t-2 border-t-gray-300 pt-10 companies-width'>
         <h1 className='font-bold text-xl md:text-2xl lg:text-3xl pb-2 text-center'>Some of the top IT Companies in Germany</h1>
         <p className='pb-2 text-center'>Find IT companies that perfectly match your needs</p>
         <div className='flex gap-4 flex-wrap py-4 justify-center'>

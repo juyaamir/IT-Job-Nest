@@ -48,7 +48,7 @@ const SearchServices = () => {
       <h1 className="text-2xl font-bold text-center p-4 text-white text-wrap">
         Explore new career opportunities!
       </h1>
-      <div className="p-3 border border-green-600 shadow-md bg-white flex gap-4 rounded-md">
+      <div className="p-3 border border-green-600 shadow-md bg-white flex gap-4 rounded-md mb-7">
         <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4 w-full">
           <Select
             className="w-full md:w-1/2"
