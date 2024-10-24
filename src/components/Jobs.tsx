@@ -1,7 +1,33 @@
-import fetchJobs from "../hooks/fetchJobs";
-
+import axios from 'axios'
+import { useState, useEffect } from "react";
 const Jobs = () => {
-  const { jobs, loading, error } = fetchJobs('https://rest.arbeitsagentur.de/jobboerse/jobsuche-service/pc/v4/jobs');
+    const [jobs, setJobs] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('')
+  
+  useEffect(() => {
+    const getJobs = async () => {
+        try {
+            setLoading(true);
+            const response = await axios.get('https://rest.arbeitsagentur.de/jobboerse/jobsuche-service/pc/v4/jobs', {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-API-Key': 'jobboerse-jobsuche'
+                }
+            });
+            setJobs(response.data);
+        } catch (error) {
+            if (axios.isAxiosError(error)) {
+                setError(error.message);
+            } else {
+                setError('An unexpected error occurred');
+            }
+        } finally {
+            setLoading(false);
+        }
+    };
+    getJobs();
+}, [])
 
   if (loading) {
     return <div>Loading...</div>;
