@@ -9,8 +9,8 @@ import { GrLocation } from "react-icons/gr";
 import axios from "axios";
 import { SlCalender } from "react-icons/sl";
 
-const SearchServices = () => {
-  interface OptionType {
+const SearchServices: React.FC = () => {
+    interface OptionType {
     value: string;
     label: string;
   }
@@ -63,7 +63,7 @@ const SearchServices = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `https://rest.arbeitsagentur.de/jobboerse/jobsuche-service/pc/v4/jobs?berufsfeld=${selectedJob?.value}&wo=${selectedCity?.value}&umkreis=200&arbeitszeit=ho;mj&page=1&size=25&pav=false`,
+        `${import.meta.env.VITE_JOB_API_URL_COUNT}?berufsfeld=${selectedJob?.value}&wo=${selectedCity?.value}&umkreis=200&arbeitszeit=ho;mj&page=1&size=25&pav=false`,
         {
           headers: {
             "Content-Type": "application/json",
