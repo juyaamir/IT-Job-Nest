@@ -9,7 +9,7 @@ const Jobs = () => {
     const getJobs = async () => {
         try {
             setLoading(true);
-            const response = await axios.get('https://rest.arbeitsagentur.de/jobboerse/jobsuche-service/pc/v4/jobs', {
+            const response = await axios.get(import.meta.env.VITE_JOB_API_URL_COUNT, {
                 headers: {
                     'Content-Type': 'application/json',
                     'X-API-Key': 'jobboerse-jobsuche'
@@ -42,7 +42,7 @@ const Jobs = () => {
       <h2 className="text-center p-4 font-bold md:text-xl text-orange-500">
         Number of IT Jobs Throughout Germany
       </h2>
-      <div className="flex gap-2 justify-between">
+      <div className="flex flex-wrap gap-2 justify-between">
         <p>
           Software Developer:{" "}
           <span className="text-orange-600 font-bold">
