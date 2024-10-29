@@ -5,6 +5,9 @@ import Theme from "../pages/Theme"
 import { Routes, Route } from "react-router-dom"
 import LoginPage from '../pages/loginPage'
 import RegisterPage from "../pages/registerPage"
+import Settings from "../pages/Settings"
+import Dashboard from "../pages/Dashboard"
+import Profile from "../pages/Profile"
 
 const AppRoutes = () => {
   return (
@@ -15,6 +18,9 @@ const AppRoutes = () => {
       <Route path='/login' element={<LoginPage />} />
       <Route path='/theme' element={<Theme />} />
       <Route path="/register" element={<RegisterPage />} />
+      <Route path="/my-account/dashboard" element={<Dashboard />} />
+      <Route path="/my-account/profile" element={<Profile />} />
+      <Route path="/my-account/settings" element={<Settings />} />
     </Routes>
   )
 }

@@ -5,10 +5,10 @@ import MobileNavbar from "./MobileNavbar"
 const Header = () => {
   return (
     <div>
-        <div className='border-b border-gray-400  p-4 hidden md:block'>
+        <div className='border-b border-gray-300  p-4 hidden md:block'>
           <DesktopNav />
         </div>
-        <div className="md:hidden border-b border-gray-400 shadow-md">
+        <div className="md:hidden border-b border-gray-300 ">
           <MobileNavbar />
         </div>
 

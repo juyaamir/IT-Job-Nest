@@ -31,19 +31,19 @@ const MobileNavbar = () => {
       {
         isOpen && (
       <div className='fixed inset-0 bg-black z-10 bg-opacity-50 '>
-        <div className="absolute flex flex-col  bg-white  inset-x-0 top-0 bottom-0 p-6 shadow-lg ">
-          <div className='flex justify-between mb-4'>
+        <div className="absolute flex flex-col  bg-white  inset-x-0 p-4 top-0 bottom-0 shadow-lg ">
+          <div className='flex justify-between'>
             <Link to='/' onClick={handleClick}><Logo /></Link>
-            <button className='fixed right-2  top-2 text-2xl bg-white py-2 px-4 rounded-full hover:text-red-500 ' onClick={handleClick}><RiCloseLargeLine /></button>
+            <button className='fixed right-4 text-3xl top-4  bg-white rounded-full hover:text-red-500 ' onClick={handleClick}><RiCloseLargeLine /></button>
           </div>
           {
             isAuthenticated && (
               <>
-              <p className='p-2 flex items-center gap-2'><FaRegUserCircle className='text-2xl'/>Hello, <span className='italic'>Amir Juya</span></p>
+              <p className='py-3 px-2 mt-4 flex items-center gap-2 border-t border-t-gray-300'><FaRegUserCircle className='text-2xl'/>Hello, <span className='italic'>Amir Juya</span></p>
               <div className='  border-y border-y-gray-300 '>
               <div 
               onClick={toggleInfo}
-              className='flex  items-center justify-between gap-2 text-xl hover:text-green-500  hover:cursor-pointer px-2 py-3 '>
+              className='flex  items-center justify-between gap-2  hover:text-green-500  hover:cursor-pointer px-2 py-3 '>
                 <p   className='flex items-center gap-2'><MdManageAccounts className='text-2xl' /> My Account</p> 
                 {
                   moreInfo ? <FaPlus />: <FaMinus /> 
@@ -52,21 +52,21 @@ const MobileNavbar = () => {
               {
                 !moreInfo && (
                   <div className='flex flex-col gap-2 ml-6 myAccount p-2'>
-                    <Link  to='/dashboard'>Dashboard</Link>
-                    <Link to='/profile'>Profile</Link>
-                    <Link to='/setting'>Settings</Link>
+                    <Link onClick={handleClick} to='/my-account/dashboard'>Dashboard</Link>
+                    <Link onClick={handleClick} to='/my-account/profile'>Profile</Link>
+                    <Link onClick={handleClick} to='/my-account/settings'>Settings</Link>
                   </div>)
               }
               </div>
               </>
             )
           }
-          <Link to='/' onClick={handleClick} className='mobMenu'><FaSearch /> Search Job</Link>
+          <Link to='/' onClick={handleClick} className='mobMenu'><FaSearch className='text-2xl'/> Search Job</Link>
             <Link to='/companies' onClick={handleClick} className='mobMenu  border-y border-y-gray-300'><MdOutlineHomeWork className='text-2xl' /> Companies</Link>
             <Link to='/favorites' onClick={handleClick} className='mobMenu '><MdFavoriteBorder className='text-2xl'/>Favorites</Link>
             {
               isAuthenticated ? (
-                <Link to='/login' onClick={handleClick} className='mobMenu border-y border-y-gray-300' ><TbLogout className='text-2xl' />Logout</Link>
+                <Link to='/logout' onClick={handleClick} className='mobMenu border-y border-y-gray-300 ' ><TbLogout className='text-2xl' />Logout</Link>
               ):(
                 <Link to='/login' onClick={handleClick} className='mobMenu border-y border-y-gray-300' ><TbLogin2 className='text-2xl'/>Login</Link>
               )
