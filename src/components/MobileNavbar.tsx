@@ -22,7 +22,6 @@ const MobileNavbar = () => {
     setMoreInfo(!moreInfo)
   };
 
-
   return (
     <div className='flex justify-between p-4 '>
       <Link to='/'>
@@ -35,7 +34,7 @@ const MobileNavbar = () => {
         <div className="absolute flex flex-col  bg-white  inset-x-0 top-0 bottom-0 p-6 shadow-lg ">
           <div className='flex justify-between mb-4'>
             <Link to='/' onClick={handleClick}><Logo /></Link>
-            <button className='fixed right-2  top-2 text-2xl bg-white py-2 px-4 rounded-full hover:text-red-500 ' onClick={handleClick}>X</button>
+            <button className='fixed right-2  top-2 text-2xl bg-white py-2 px-4 rounded-full hover:text-red-500 ' onClick={handleClick}><RiCloseLargeLine /></button>
           </div>
           {
             isAuthenticated && (
@@ -50,7 +49,6 @@ const MobileNavbar = () => {
                   moreInfo ? <FaPlus />: <FaMinus /> 
                 }
               </div>
-            
               {
                 !moreInfo && (
                   <div className='flex flex-col gap-2 ml-6 myAccount p-2'>
@@ -61,7 +59,6 @@ const MobileNavbar = () => {
               }
               </div>
               </>
-
             )
           }
           <Link to='/' onClick={handleClick} className='mobMenu'><FaSearch /> Search Job</Link>
@@ -73,10 +70,7 @@ const MobileNavbar = () => {
               ):(
                 <Link to='/login' onClick={handleClick} className='mobMenu border-y border-y-gray-300' ><TbLogin2 className='text-2xl'/>Login</Link>
               )
-            }
-            
-{/*             <Link to='/register' onClick={handleClick} className='flex  items-center gap-2 text-xl  px-2 py-3 hover:bg-gray-200 border-y border-y-gray-300' >Register</Link> */}
-        
+            }   
         </div>
       </div>
         )
