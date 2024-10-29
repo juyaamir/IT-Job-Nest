@@ -29,6 +29,8 @@ const MobileNavbar = () => {
             <Link to='/companies' onClick={handleClick} className='flex  items-center gap-2 text-xl  px-2 py-3 hover:bg-gray-200  border-y border-y-gray-300'><MdOutlineHomeWork /> Companies</Link>
             <Link to='/favorites' onClick={handleClick} className='flex  items-center gap-2 text-xl  px-2 py-3 hover:bg-gray-200 '><MdFavoriteBorder />Favorites</Link>
             <Link to='/login' onClick={handleClick} className='flex  items-center gap-2 text-xl  px-2 py-3 hover:bg-gray-200 border-y border-y-gray-300' ><FaRegUserCircle />Login</Link>
+            <Link to='/register' onClick={handleClick} className='flex  items-center gap-2 text-xl  px-2 py-3 hover:bg-gray-200 border-y border-y-gray-300' >Register</Link>
+        
         </div>
       </div>
         )

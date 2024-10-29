@@ -8,7 +8,7 @@ const Header = () => {
         <div className='border-b border-gray-400  p-4 hidden md:block'>
           <DesktopNav />
         </div>
-        <div className="md:hidden">
+        <div className="md:hidden border-b border-gray-400 shadow-md">
           <MobileNavbar />
         </div>
 
