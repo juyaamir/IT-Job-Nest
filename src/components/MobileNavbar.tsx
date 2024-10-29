@@ -12,7 +12,7 @@ import { TbLogout, TbLogin2  } from "react-icons/tb";
 import { RiCloseLargeLine } from "react-icons/ri";
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState<Boolean>(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [moreInfo, setMoreInfo] = useState(true);
   const handleClick = () => {
     setIsOpen(false)

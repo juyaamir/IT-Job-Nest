@@ -1,7 +1,8 @@
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 const Register = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,6 +26,9 @@ const Register = () => {
       );
       setMessage(response.data.message);
       console.log(response.data);
+      setTimeout(()=> {
+      navigate('/login')
+      }, 3000);
     } catch (err: any) {
       if (err instanceof Error) {
         console.log(err.message);
@@ -38,6 +42,8 @@ const Register = () => {
       email: "",
       password: ""
     });
+
+
   };
   if (error) {
     <div className="text-red-500 font-bold">{error}</div>;
