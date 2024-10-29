@@ -71,7 +71,7 @@ const Login: React.FC = () => {
         onChange={handleChange}
         />
         <button
-        className='border border-gray-300 rounded-md p-2 w-full md:w-96 px-4 py-2'
+        className='border border-gray-300 rounded-md p-2 w-full md:w-96 px-4 py-2 bg-green-600 text-white font-semibold hover:bg-green-700'
         type='submit'
         >Login</button>
       </form>

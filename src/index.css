@@ -14,3 +14,25 @@
 .sofia {
     font-family: "Sofia", sans-serif;
 }
+
+.myAccount a:hover {
+    color: green;
+    text-decoration: underline;
+}
+
+.mobMenu {
+    display: flex;
+    justify-items: center;
+    gap: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.mobMenu:hover {
+    color: green; 
+    background-color: rgb(241, 241, 241);
+}
