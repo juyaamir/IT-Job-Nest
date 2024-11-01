@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
-
+import { useAuth } from "../context/AuthContext";
 interface IForm {
   email: string;
   password: string;
@@ -9,6 +9,7 @@ interface IForm {
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
+  const { setIsAuthenticated } = useAuth();
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [formData, setFormData] = useState<IForm>({
@@ -29,6 +30,11 @@ const Login: React.FC = () => {
     try {
       const response = await axios.post('http://localhost:8000/users/v1/login', formData);
       console.log(response.data);
+      console.log(response.data.token);
+
+      //save to localStorage
+      localStorage.setItem("token",response.data.token);
+      setIsAuthenticated(true);
       setMessage(response.data.message);
       setError(null); // Clear any previous errors
       setTimeout(() => {

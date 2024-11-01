@@ -4,12 +4,14 @@ import App from './App.tsx'
 import './index.css'
 import '@fontsource/sofia'
 import { BrowserRouter as Router } from 'react-router-dom'
+import { AuthProvider } from './context/AuthContext'
 
 createRoot(document.getElementById('root')!).render(
-  <Router basename='/IT-Job-Nest'>  
-    <StrictMode>
-      <App />
+  <StrictMode>
+    <AuthProvider>
+      <Router basename='/IT-Job-Nest'>  
+        <App />
+    </Router>
+  </AuthProvider>
   </StrictMode>
-  </Router>
-
 )

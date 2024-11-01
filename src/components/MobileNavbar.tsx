@@ -10,9 +10,13 @@ import { FaSearch } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { TbLogout, TbLogin2  } from "react-icons/tb";
 import { RiCloseLargeLine } from "react-icons/ri";
+import { useAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 const MobileNavbar = () => {
+  const { setIsAuthenticated } = useAuth();
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState<Boolean>(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const { isAuthenticated } = useAuth();
   const [moreInfo, setMoreInfo] = useState(true);
   const handleClick = () => {
     setIsOpen(false)
@@ -21,6 +25,13 @@ const MobileNavbar = () => {
   const toggleInfo = () => {
     setMoreInfo(!moreInfo)
   };
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    setIsOpen(false);
+    navigate('/login');
+    setIsAuthenticated(false);
+  }
 
   return (
     <div className='flex justify-between p-4 '>
@@ -66,7 +77,7 @@ const MobileNavbar = () => {
             <Link to='/favorites' onClick={handleClick} className='mobMenu '><MdFavoriteBorder className='text-2xl'/>Favorites</Link>
             {
               isAuthenticated ? (
-                <Link to='/logout' onClick={handleClick} className='mobMenu border-y border-y-gray-300 ' ><TbLogout className='text-2xl' />Logout</Link>
+                <button onClick={handleLogout} className='mobMenu border-y border-y-gray-300 ' ><TbLogout className='text-2xl' />Logout</button>
               ):(
                 <Link to='/login' onClick={handleClick} className='mobMenu border-y border-y-gray-300' ><TbLogin2 className='text-2xl'/>Login</Link>
               )
