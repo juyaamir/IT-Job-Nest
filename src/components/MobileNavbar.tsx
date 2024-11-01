@@ -1,12 +1,8 @@
 import Logo from './Logo'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import { MdOutlineHomeWork } from "react-icons/md";
-import { MdFavoriteBorder } from "react-icons/md";
-import { FaRegUserCircle } from "react-icons/fa";
-import { MdManageAccounts } from "react-icons/md";
-import { FaPlus, FaMinus } from "react-icons/fa";
-import { FaSearch } from "react-icons/fa";
+import { MdOutlineHomeWork, MdFavoriteBorder, MdManageAccounts } from "react-icons/md";
+import { FaRegUserCircle, FaPlus, FaMinus, FaSearch } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { TbLogout, TbLogin2  } from "react-icons/tb";
 import { RiCloseLargeLine } from "react-icons/ri";
@@ -86,8 +82,6 @@ const MobileNavbar = () => {
       </div>
         )
       }
-
-
     </div>
   )
 }

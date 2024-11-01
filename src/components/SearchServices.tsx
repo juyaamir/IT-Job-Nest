@@ -129,14 +129,14 @@ const SearchServices: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-4 justify-between jobs-width">
+      <div className="flex flex-wrap gap-4 justify-center jobs-width">
         {jobs.length > 0 ? (
           jobs.map((job: JobType, index: number) => {
             const daysAgo = daysDifference(job.eintrittsdatum);
             return (
               <div
                 key={index}
-                className="border border-gray-200 h-52 w-96 shadow-md p-2 rounded-md flex flex-col gap-2"
+                className="border border-gray-200 h-52 w-96 shadow-md p-2 rounded-md flex flex-col gap-2 "
               >
                 <h2 className="font-bold">{job.titel}</h2>
                 <p className="flex items-center gap-2">
