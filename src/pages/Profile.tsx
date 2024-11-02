@@ -24,7 +24,7 @@ const Profile: React.FC = () => {
     // Get data from backend
     const getProfile = async () => {
       try {
-        const response = await axios.get<{ profile: ApiData }>('http://localhost:8000/users/v1/profile', {
+        const response = await axios.get<{ profile: ApiData }>(`${import.meta.env.VITE_USER_PROFILE_API}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
