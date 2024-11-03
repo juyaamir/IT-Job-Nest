@@ -59,7 +59,7 @@ const Login: React.FC = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className='border border-gray-300 flex items-center justify-center flex-col p-4 gap-3 rounded-lg shadow-lg w-full'
+      className='border border-gray-300 flex items-center justify-center flex-col p-4 gap-3 rounded-lg shadow-lg w-full form-width'
     >
       {message && (
         <p className="text-blue-400 italic">{message}</p>

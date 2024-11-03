@@ -46,7 +46,7 @@ const Register = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full border border-gray-300 flex items-center justify-center flex-col p-4 gap-3 rounded-lg shadow-lg"
+      className="w-full border border-gray-300 flex items-center justify-center flex-col p-4 gap-3 rounded-lg shadow-lg form-width"
     >
       {message && <p className="text-blue-500 font-bold">{message}</p>}
       {error && <p className="text-red-400">{error}</p>}

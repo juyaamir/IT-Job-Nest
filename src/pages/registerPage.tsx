@@ -6,10 +6,10 @@ const RegisterPage = () => {
     <div className='flex flex-col justify-center items-center mt-20 p-4 w-full'>
         <Register />
 
-        <div className="flex flex-col gap-4 mt-6 w-full px-4">
+        <div className="flex flex-col gap-4 mt-6 w-full md:w-96">
         <p className="text-center italic">Already an IT-Job-Nest member?</p>
         <p
-        className="py-2 border border-green-600 text-green-600 w-full text-center hover:underline rounded-md"
+        className="py-2 border border-green-600 text-green-600 w-full md:w-96 text-center hover:underline rounded-md"
         >
           <Link to='/login'>
           Login
