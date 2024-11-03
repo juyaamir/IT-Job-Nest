@@ -60,7 +60,7 @@ const Dashboard: React.FC = () => {
 
   return (
     <div className='text-xl relative group'>
-      <p className='px-4 py-2 hover:cursor-pointer'>Hi, {myProfile.name}</p>
+      <p className='px-4 py-2 hover:cursor-pointer text-center font-bold text-2xl'>Welcome,  {myProfile.name}</p>
       <div className='border border-gray-400 w-96 p-6 rounded absolute'>
         <div className='flex gap-2 p-2 bg-cyan-300 rounded'>
           <img src='' alt='' className='h-12 w-12 border-blue-400 border rounded-full' />

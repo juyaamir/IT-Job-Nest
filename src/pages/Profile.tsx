@@ -47,7 +47,7 @@ const Profile: React.FC = () => {
   }, []);
 
   return (
-    <div className="profile-container">
+    <div className="profile-container mt-20">
       <div className='flex gap-8'>
       <div className='flex flex-col text-center w-44 justify-center items-center p-2'>
         <img src='' alt="image" className='h-28 w-28 rounded-full ' />

@@ -1,6 +1,6 @@
 import Logo from './Logo'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { MdOutlineHomeWork, MdFavoriteBorder, MdManageAccounts } from "react-icons/md";
 import { FaRegUserCircle, FaPlus, FaMinus, FaSearch } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -8,7 +8,9 @@ import { TbLogout, TbLogin2  } from "react-icons/tb";
 import { RiCloseLargeLine } from "react-icons/ri";
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 const MobileNavbar = () => {
+  const [myProfile, setMyProfile] = useState<any>(null);
   const { setIsAuthenticated } = useAuth();
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState<Boolean>(false);
@@ -27,7 +29,28 @@ const MobileNavbar = () => {
     setIsOpen(false);
     navigate('/login');
     setIsAuthenticated(false);
-  }
+  };
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    const getProfile = async () => {
+      try {
+        const res = await axios.get(import.meta.env.VITE_USER_PROFILE_API, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+       /*  console.log('Profile: ', res.data); */
+        setMyProfile(res.data.profile);
+      } catch (error) {
+        console.error('Error: ', error);
+/*         setError('An error occurred while trying to get your profile'); */
+      }
+    };
+
+    getProfile();
+  }, [navigate]);
+
 
   return (
     <div className='flex justify-between p-4 '>
@@ -44,9 +67,9 @@ const MobileNavbar = () => {
             <button className='fixed right-4 text-3xl top-4  bg-white rounded-full hover:text-red-500 ' onClick={handleClick}><RiCloseLargeLine /></button>
           </div>
           {
-            isAuthenticated && (
+            isAuthenticated &&  (
               <>
-              <p className='py-3 px-2 mt-4 flex items-center gap-2 border-t border-t-gray-300'><FaRegUserCircle className='text-2xl'/>Hello, <span className='italic'>Amir Juya</span></p>
+              <p className='py-3 px-2 mt-4 flex items-center gap-2 border-t border-t-gray-300'><FaRegUserCircle className='text-2xl'/>Hello, <span className='italic'>{myProfile?.name}</span></p>
               <div className='  border-y border-y-gray-300 '>
               <div 
               onClick={toggleInfo}
@@ -82,6 +105,7 @@ const MobileNavbar = () => {
       </div>
         )
       }
+
     </div>
   )
 }

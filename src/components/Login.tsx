@@ -29,8 +29,8 @@ const Login: React.FC = () => {
 
     try {
       const response = await axios.post(import.meta.env.VITE_USER_LOGIN_API, formData);
-      console.log(response.data);
-      console.log(response.data.token);
+/*       console.log(response.data);
+      console.log(response.data.token); */
 
       //save to localStorage
       localStorage.setItem("token",response.data.token);
