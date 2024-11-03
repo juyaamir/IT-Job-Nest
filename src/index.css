@@ -35,3 +35,10 @@
 .mobMenu:hover {
     color: green; 
 }
+
+.scale-hover Link {
+    transition: transform 0.2s ease-in-out;
+}
+.scale-hover Link:hover {
+    transform: scale(1.05);
+}

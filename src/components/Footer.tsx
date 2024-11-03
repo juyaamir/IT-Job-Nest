@@ -17,7 +17,7 @@ const Footer = () => {
             }
           </div>
         </div>
-        <p className='text-sm md:text-lg text-center p-1'>&copy; 2024 | Designed & Coded with ❤️ by Amir Muhammad Juya</p>
+        <p className='text-sm md:text-lg text-center p-1'>&copy; 2024 | Designed & Coded with ❤️ by <Link  to='https://juyaamir.github.io/portfolio/' target='_blank' >Amir Muhammad Juya</Link></p>
       </footer>
   )
 }

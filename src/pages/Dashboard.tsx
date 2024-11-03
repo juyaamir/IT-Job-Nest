@@ -39,7 +39,7 @@ const Dashboard: React.FC = () => {
             Authorization: `Bearer ${token}`,
           },
         });
-        console.log('Profile: ', res.data);
+       /*  console.log('Profile: ', res.data); */
         setMyProfile(res.data.profile);
       } catch (error) {
         console.error('Error: ', error);
@@ -69,7 +69,7 @@ const Dashboard: React.FC = () => {
             <span className='text-sm'>Thanks for being an IT-Job-Nest Member</span>
           </p>
         </div>
-        <div className='flex justify-between text-base py-4 dashboard-list'>
+{/*         <div className='flex justify-between text-base py-4 dashboard-list'>
           <ul className='font-semibold flex flex-col gap-3'>
             <li>
               <button className='flex items-center gap-2' onClick={handleSignOut}>
@@ -77,7 +77,7 @@ const Dashboard: React.FC = () => {
               </button>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   );
