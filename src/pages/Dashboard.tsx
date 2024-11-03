@@ -66,7 +66,7 @@ const Dashboard: React.FC = () => {
           <img src='' alt='' className='h-12 w-12 border-blue-400 border rounded-full' />
           <p className='flex flex-col'>
             <span className='font-bold text-base'>{myProfile.name}</span>
-            <span className='text-sm'>Thanks for being a IT-Job-Nest Member</span>
+            <span className='text-sm'>Thanks for being an IT-Job-Nest Member</span>
           </p>
         </div>
         <div className='flex justify-between text-base py-4 dashboard-list'>

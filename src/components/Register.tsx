@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+
 const Register = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -8,8 +9,8 @@ const Register = () => {
     email: "",
     password: ""
   });
-  const [error, setError] = useState<String>("");
-  const [message, setMessage] = useState<String>("");
+  const [error, setError] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -20,33 +21,27 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(import.meta.env.VITE_USER_REGISTER_API,
-        formData
-      );
+      const response = await axios.post(import.meta.env.VITE_USER_REGISTER_API, formData);
       setMessage(response.data.message);
       console.log(response.data);
-      setTimeout(()=> {
-      navigate('/login')
+      setFormData({
+        name: "",
+        email: "",
+        password: ""
+      });
+      setTimeout(() => {
+        navigate('/login');
       }, 3000);
     } catch (err: any) {
-      if (err instanceof Error) {
+      if (axios.isAxiosError(err)) {
         console.log(err.message);
-        setError(err.message);
+        setError(err.response?.data.message || "An unexpected error occurred");
       } else {
         console.log("An unexpected error occurred");
+        setError("An unexpected error occurred");
       }
     }
-    setFormData({
-      name: "",
-      email: "",
-      password: ""
-    });
-
-
   };
-  if (error) {
-    <div className="text-red-500 font-bold">{error}</div>;
-  }
 
   return (
     <form
