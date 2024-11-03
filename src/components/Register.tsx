@@ -20,8 +20,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        import.meta.env.VITE_USER_REGISTER_API,
+      const response = await axios.post('http://localhost:8000/users/v1/register',
         formData
       );
       setMessage(response.data.message);
